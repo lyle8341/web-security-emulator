@@ -1,6 +1,7 @@
 package com.lyle.wse.mapper;
 
 import com.lyle.wse.model.Product;
+import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 
@@ -9,6 +10,7 @@ import java.util.List;
 /**
  * @author lyle 2024-09-04 21:07
  */
+@Mapper
 public interface ProductMapper {
 
     @Select("select * from products where productID=${id}")

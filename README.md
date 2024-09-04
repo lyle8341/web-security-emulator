@@ -39,3 +39,8 @@
 
 
 
+## graalvm native
++ 1 .切换到graalvm java环境
+  - graalvm-jdk-22_macos-x64_bin
++ 2 .在项目根路径下执行
+  - `./mvnw native:compile -Pnative` 
