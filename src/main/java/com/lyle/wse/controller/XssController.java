@@ -76,4 +76,11 @@ public class XssController {
         return mv;
     }
 
+    @GetMapping("/dom")
+    public ModelAndView dom_xss(String search) {
+        ModelAndView mv = new ModelAndView("dom-xss");
+        mv.addObject("searchResult", "n search results for " + search);
+        return mv;
+    }
+
 }

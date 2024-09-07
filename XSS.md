@@ -20,8 +20,30 @@
   + 3 .列表页面查看刚才录入的内容
     + http://localhost:8080/xss/storedList
 ---
-+ DOM型XSS演示
 
+
++ DOM型XSS演示
+  - [http://localhost:8080/xss/dom?search=">&lt;svg onload=alert(1)>](http://localhost:8080/xss/dom?search=%22%3E%3Csvg%20onload=alert(1)%3E)
+
+ - Source
+   > any JS property or function that accepts user input from somewhere on the page. 
+   >> An example of a source is the location.search property because it reads input from the query string.
+   - document.URL
+   - document.documentURI
+   - document.URLUnencoded
+   - document.baseURI
+   - location.search
+   - document.cookie
+   - document.referrer
+ - Sink
+   > Basically, if the function returns input back to the screen as output without security checks, it’s considered a sink.
+   - document.write()
+   - document.writeln()
+   - document.domain
+   - element.innerHTML
+   - element.outerHTML
+   - element.insertAdjacentHTML
+   - element.onevent
 
 
 
