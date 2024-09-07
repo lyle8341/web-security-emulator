@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href=/css/academyLabHeader.css rel=stylesheet>
+    <link href=/css/labsBlog.css rel=stylesheet>
+    <title>Stored XSS生效列表</title>
+</head>
+<body>
+<div theme="blog">
+    <section class="maincontainer">
+        <div class="container is-page">
+            <div class="blog-post">
+                <h1>Comments</h1>
+                <tr th:each="var: ${comments}">
+                    <section class="comment">
+                        <p>
+                            <img src="/images/avatarDefault.svg" class="avatar"><span
+                                th:text="${var.name}">用户名</span> | <span
+                                th:text="${#dates.format(var.createTime, 'yyyy-MM-dd HH:mm:ss')}">评论时间</span>
+                        </p>
+                        <!--这里使用utext演示效果-->
+                        <p th:utext="${var.comment}">评论内容</p>
+                        <p th:unless="${var.postId}"></p>
+                    </section>
+                </tr>
+                <hr>
+                <div class="is-linkback">
+                    <a href="/">Back to Blog</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="footer-wrapper">
+    </div>
+</div>
+</body>
+</html>

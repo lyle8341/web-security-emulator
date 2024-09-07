@@ -19,9 +19,37 @@
 -- Current Database: `southwind`
 --
 
-CREATE DATABASE /*!32312 IF NOT EXISTS*/ `southwind` /*!40100 DEFAULT CHARACTER SET latin1 */;
+CREATE DATABASE /*!32312 IF NOT EXISTS*/ `southwind` /*!40100 DEFAULT CHARACTER SET utf8mb4 */;
 
 USE `southwind`;
+
+--
+-- Table structure for table `comment`
+--
+
+DROP TABLE IF EXISTS `comment`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `comment` (
+  `postId` int(11) NOT NULL,
+  `comment` varchar(128) DEFAULT NULL,
+  `name` varchar(64) DEFAULT NULL,
+  `email` varchar(64) DEFAULT NULL,
+  `website` varchar(128) DEFAULT NULL,
+  `createTime` datetime DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`postId`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='评论表';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `comment`
+--
+
+LOCK TABLES `comment` WRITE;
+/*!40000 ALTER TABLE `comment` DISABLE KEYS */;
+INSERT INTO `comment` VALUES (3,'It is a greate job','雪莲峰','867708794@qq.com','https://github.com/lyle8341','2024-09-07 11:26:05'),(4,'<script>alert(1)</script>','吕布','lvbu@qq.com','http://www.lvbu.com','2024-09-07 11:59:35');
+/*!40000 ALTER TABLE `comment` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `products`
@@ -37,7 +65,7 @@ CREATE TABLE `products` (
   `quantity` int(10) unsigned NOT NULL DEFAULT '0',
   `price` decimal(7,2) NOT NULL DEFAULT '99999.99',
   PRIMARY KEY (`productID`)
-) ENGINE=InnoDB AUTO_INCREMENT=1007 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=1007 DEFAULT CHARSET=utf8mb4 COMMENT='产品表';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -59,4 +87,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-09-04 22:42:48
+-- Dump completed on 2024-09-07 12:54:47

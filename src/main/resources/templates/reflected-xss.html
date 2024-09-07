@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reflected XSS into HTML context with nothing encoded</title>
+</head>
+<body>
+
+<!--thymeleaf特殊字符输出转义，字符串包括 /@#￥%&* ，正常来说他们输出会被转义掉-->
+<h1 th:text="${search}">特殊字符输出转义</h1>
+
+
+<p th:utext="${search}">这里会解析html</p>
+
+</body>
+</html>
