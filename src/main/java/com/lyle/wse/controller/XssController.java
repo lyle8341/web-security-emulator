@@ -82,5 +82,4 @@ public class XssController {
         mv.addObject("searchResult", "n search results for " + search);
         return mv;
     }
-
 }
