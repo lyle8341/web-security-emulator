@@ -4,9 +4,9 @@
 
 + in WHERE clause allowing retrieval of hidden data
   ```html
-  productCode参数传递 < '+OR+1=1--+ >
+  productCode参数传递  '+OR+1=1--+
   ```  
-  > http://localhost:8080/sql/p2?productCode='+OR+1=1--+
+  - [attacker > http://localhost:8080/sql/i?productCode='+OR+1=1--+](http://localhost:8080/sql/i?productCode='+OR+1=1--+)
   ```html
   执行sql如下:
    select * from products where productCode = '' OR 1=1-- ' AND productID = 1001;

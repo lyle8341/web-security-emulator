@@ -14,13 +14,13 @@
                 <tr th:each="var: ${comments}">
                     <section class="comment">
                         <p>
-                            <img src="/images/avatarDefault.svg" class="avatar"><span
+                            <img src="/images/li.jpg" class="avatar"><span
                                 th:text="${var.name}">用户名</span> | <span
                                 th:text="${#dates.format(var.createTime, 'yyyy-MM-dd HH:mm:ss')}">评论时间</span>
                         </p>
                         <!--这里使用utext演示效果-->
                         <p th:utext="${var.comment}">评论内容</p>
-                        <p th:unless="${var.postId}"></p>
+                        <p hidden="" th:text="${var.postId}"></p>
                     </section>
                 </tr>
                 <hr>

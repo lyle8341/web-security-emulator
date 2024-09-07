@@ -29,7 +29,7 @@ public class SqlInjectionController {
      * URL 不能包含空格。 URL 编码通常使用加号（+）或%20 替代空格
      * @param productCode productCode
      */
-    @GetMapping("/p2")
+    @GetMapping("/i")
     public List<Product> injection2(@RequestParam String productCode){
         return productMapper.findProductsByCode(productCode);
     }

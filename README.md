@@ -1,8 +1,15 @@
 # web security emulator
 
+> 本工程旨在通过代码模拟各种漏洞，观察其前后端
+
+
 + 环境配置
   + mysql:5.7.31-log
   + java:java version "17" 2021-09-14 LTS
+
++ thymeleaf
+  + 用th:text不会解析html，用th:utext会解析html，在页面中显示相应的样式
+
 
 
 
