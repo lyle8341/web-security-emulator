@@ -12,12 +12,12 @@
   + 浏览器配置代理
     + [不使用插件直接在浏览器中配置代理](https://portswigger.net/burp/documentation/desktop/external-browser-config/browser-config-chrome-macos)
     + 使用插件（FoxyProxy）配置代理
-  + 打开浏览器中FoxyProxy Burp代理
+  + 打开浏览器中FoxyProxy Burp代理（同时打开软件Burp Suite）
     + ![打开Burp代理](image/open_burp.png)
-  + chrome中输入http://burpsuite/或http://burp/
+  + chrome中输入http://burpsuite/或http://burp/，可见
     + ![欢迎页](image/burp_welcom_page.png)
     + 也可下载CA证书，后续安装证书（抓包https）
-  + 配合Burp Suite工具，chrome打开url，在关闭拦截的情况下查看Proxy--> Http history，可以看到所有请求
+  + 配合Burp Suite工具，在chrome打开网址，在关闭拦截的情况下查看Proxy--> Http history，可以看到所有请求
   + 也可以打开Burp Suite的拦截，当chrome 请求到达BP时候，使用forward进行转发放行
 
 
